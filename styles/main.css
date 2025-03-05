@@ -233,14 +233,15 @@ svg * {
 :root {
   --color-light: #ffffff;
   --color-dark: #141414;
-  --color-dark-10: #1A1A1A;
+  --color-dark-10: #1a1a1a;
   --color-dark-15: #262626;
   --color-dark-20: #333333;
   --color-dark-40: #666666;
-  --color-gray-50: #7E7E81;
-  --color-gray-60: #98989A;
-  --color-accent: #FFD11A;
-  --color-red: #FF5500;
+  --color-gray-50: #7e7e81;
+  --color-gray-60: #98989a;
+  --color-accent: #ffd11a;
+  --color-red: #ff5500;
+  --border: 0.0625rem solid var(--color-dark-15);
   --font-family-base: "Inter", sans-serif;
   --font-family-accent: "Khumbh Sans", sans-serif;
   --container-width: 100rem;
@@ -389,6 +390,31 @@ a[class] {
   outline: 0.125rem dashed var(--color-light);
   outline-offset: 0.25rem;
   transition-duration: 0s !important;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.625rem;
+}
+.icon::after {
+  --size: 1.5rem;
+  width: var(--size);
+  height: var(--size);
+  content: "";
+  flex-shrink: 0;
+  background-position: center;
+  block-size: contain;
+  background-repeat: no-repeat;
+}
+.icon--yellow-arrow::after {
+  background-image: url("../../icons/arrow-top-yellow.svg");
+}
+
+.header__promo {
+  padding-block: 1.25rem;
+  text-align: center;
+  border-bottom: var(--border);
 }
 
 /*# sourceMappingURL=main.css.map */
