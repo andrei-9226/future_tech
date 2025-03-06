@@ -757,8 +757,4 @@ button[aria-label]::before {
   }
 }
 
-header {
-  display: none !important;
-}
-
 /*# sourceMappingURL=main.css.map */
