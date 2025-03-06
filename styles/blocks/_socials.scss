@@ -1,20 +1,28 @@
 @use "../helpers" as *;
 
 .socials {
-    &__list {
-        display: flex;
-        column-gap: rem(20);
+  &__list {
+    display: flex;
+    column-gap: rem(20);
 
-        @include laptop {
-            column-gap: rem(14);
-        }
+    @include laptop {
+      column-gap: rem(14);
     }
+  }
 
-    &__item {
-        display: flex;
-    }
+  &__item {
+    display: flex;
+  }
 
-    &__link {
-        color: var(--color-light);
+  &__link {
+    --size: #{rem(24)};
+
+    @include square(--size);
+
+    color: var(--color-light);
+
+    @include laptop {
+        --size: #{rem(20)};
     }
+  }
 }
