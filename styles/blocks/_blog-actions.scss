@@ -11,6 +11,7 @@
   }
 
   &__button {
+    padding: rem(8) rem(16);
     display: inline-flex;
     align-items: center;
     column-gap: rem(4);
@@ -22,15 +23,16 @@
     font-size: rem(18);
 
     @include laptop {
+      padding: rem(6) rem(12);
       column-gap: rem(2);
       font-size: rem(14);
     }
 
     &.is-active {
-        svg * {
-            fill: var(--color-red);
-            stroke: var(--color-red);
-        }
+      svg * {
+        fill: var(--color-red);
+        stroke: var(--color-red);
+      }
     }
   }
   &__icon-wrapper {
